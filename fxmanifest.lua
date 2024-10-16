@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'YourName'
-description 'Custom FiveM Radio with Position'
+author '94Spike94'
+description 'Custom FiveM Radio mit Position'
 version '1.0.0'
 
 client_script 'client.lua'
