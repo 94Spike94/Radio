@@ -1,0 +1,8 @@
+So funktioniert es:
+1. Vier Punkte definieren: In der config.lua kannst du für jeden Radiosender vier Punkte definieren, die die Ecken des Bereichs bilden. Diese Punkte werden als Vektoren (Koordinaten) angegeben.
+
+2. Polygonüberprüfung: In der client.lua gibt es die Funktion isPointInPolygon, die überprüft, ob sich der Spieler innerhalb der vier Punkte befindet. Sie verwendet den Strahlenschnittalgorithmus, um festzustellen, ob der Spieler in diesem Polygon ist.
+
+3. Musik abspielen und stoppen: Wenn sich der Spieler innerhalb der vier definierten Punkte befindet, wird die Musik abgespielt. Verlässt der Spieler den Bereich, wird die Musik gestoppt.
+
+4. Musikdateien: Die Musikdateien müssen im Ordner html/sounds/ abgelegt werden. In der config.lua kannst du den Namen der MP3-Dateien für die jeweiligen Radiosender festlegen.

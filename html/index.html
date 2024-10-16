@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Radio</title>
+</head>
+<body>
+    <audio id="radioPlayer" autoplay></audio>
+
+    <script>
+        const player = document.getElementById('radioPlayer');
+
+        window.addEventListener('message', function(event) {
+            const data = event.data;
+
+            if (data.type === 'play') {
+                player.src = `sounds/${data.file}`;
+                player.volume = data.volume;
+                player.play();
+            }
+
+            if (data.type === 'stop') {
+                player.pause();
+                player.src = '';
+            }
+
+            if (data.type === 'setVolume') {
+                player.volume = data.volume;
+            }
+        });
+    </script>
+</body>
+</html>
